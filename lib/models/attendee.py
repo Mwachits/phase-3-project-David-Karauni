@@ -9,7 +9,6 @@ class Attendee(Base):
     name = Column(String)
     email = Column(String)
 
-    # Ensure this backref name is unique
     registrations = relationship('Registration', back_populates='attendee', cascade='all, delete-orphan')
 
     def __repr__(self):

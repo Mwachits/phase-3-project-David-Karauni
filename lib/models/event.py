@@ -9,7 +9,7 @@ class Event(Base):
     id = Column(Integer, primary_key=True)
     name = Column(String)
     description = Column(String)
-    date = Column(String)  # Use Date type if you prefer
+    date = Column(String)  
     location = Column(String)
 
     registrations = relationship('Registration', back_populates='event', cascade='all, delete-orphan')
